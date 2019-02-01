@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <div className="Header dpFlx jusConSpaAro ">
         <h1 className="siteName flx20">Small Project</h1>
-        <Navigation link="home" />
+        <Navigation link="home" changeAddress={this.props.changeAddress} />
       </div>
     );
   }

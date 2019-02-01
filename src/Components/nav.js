@@ -6,31 +6,27 @@ class Navigation extends Component {
     this.state = {
       link: this.props.link
     };
-    this.changeLink = this.changeLink.bind(this);
+    
   }
-  changeLink(lnk) {
-    this.setState({
-      link: lnk
-    });
-  }
+ 
   render() {
     return (
       <div className="navigation flx80" link={this.state.link}>
         <ul className="navUl dpFlx jusConSpaAro">
           <li>
-            <a onClick={() => this.changeLink("home")}>Home</a>
+            <p onClick={() => this.props.changeAddress('home')}>Home</p>
           </li>
           <li>
-            <a onClick={() => this.changeLink("shop")}>Shop</a>
+            <p onClick={() => this.props.changeAddress("shop")}>Shop</p>
           </li>
           <li>
-            <a onClick={() => this.changeLink("contactUs")}>Contact us</a>
+            <p onClick={() => this.props.changeAddress("contactUs")}>Contact us</p>
           </li>
           <li>
-            <a onClick={() => this.changeLink("aboutUs")}>About us</a>
+            <p onClick={() => this.props.changeAddress("aboutUs")}>About us</p>
           </li>
           <li>
-            <a onClick={() => this.changeLink("login")}>Login</a>
+            <p onClick={() => this.props.changeAddress("login")}>Login</p>
           </li>
         </ul>
       </div>
